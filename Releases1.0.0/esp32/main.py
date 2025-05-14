@@ -20,7 +20,7 @@ in1 = Pin(18, Pin.OUT)
 in2 = Pin(19, Pin.OUT)
 pwm = PWM(Pin(21))
 pwm.freq(1000)
-stby = Pin(17, Pin.OUT)
+stby = Pin(5, Pin.OUT)
 stby.value(1)
 motor = DCmotor(in1, in2, pwm, stby)
 
