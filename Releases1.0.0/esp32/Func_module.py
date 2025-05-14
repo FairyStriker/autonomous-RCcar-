@@ -6,9 +6,9 @@ from hcsr04 import HCSR04
 class sensors_data:
     def __init__(self,max_cm=10):
         self.cm_timeout = int(29.1 * max_cm * 2)
-        self.pins = [(5, 4), (13, 12), (15, 14), (23, 22), (27, 26), (33, 32)]
+        self.pins = [(15, 4), (13, 12), (17, 16), (23, 22), (27, 26), (33, 32)]
         self.echo_sensors = [HCSR04(trig, echo, self.cm_timeout) for trig, echo in self.pins]
-        self.ir_sensors = [Pin(12,Pin.IN),Pin(13,Pin.IN)]
+        self.ir_sensors = [Pin(34,Pin.IN),Pin(35,Pin.IN)]
 
     def read_all_sensors(self):
         """
